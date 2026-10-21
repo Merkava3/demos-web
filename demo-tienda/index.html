@@ -81,7 +81,7 @@ footer{background:var(--d);color:#cfc6e6;text-align:center;padding:30px;font-siz
 <span class="pill">✨ Nueva colección 2026</span>
 <h1>Ropa que se siente <span>como tú</span></h1>
 <p>Prendas cómodas, bonitas y a buen precio. Arma tu pedido aquí y envíalo por WhatsApp en un clic: te confirmamos talla y envío al instante.</p>
-<div style="display:flex;gap:12px;flex-wrap:wrap"><a class="btn" href="#catalogo">Ver catálogo</a><a class="btn w" href="https://wa.me/570000000000?text=Hola,%20quiero%20información%20de%20la%20tienda" target="_blank">💬 WhatsApp</a></div>
+<div style="display:flex;gap:12px;flex-wrap:wrap"><a class="btn" href="#catalogo">Ver catálogo</a><a class="btn w" href="https://wa.me/573005435314?text=Hola,%20quiero%20información%20de%20la%20tienda" target="_blank">💬 WhatsApp</a></div>
 </div>
 <div class="collage"><div class="tile">👗</div><div class="tile">👕</div><div class="tile">👟</div><div class="tile">👜</div></div>
 </div></section>
@@ -108,7 +108,7 @@ footer{background:var(--d);color:#cfc6e6;text-align:center;padding:30px;font-siz
 <div class="df"><div class="row" style="margin-bottom:14px"><b>Total</b><b id="total">$0</b></div>
 <button class="btn w" style="width:100%" onclick="sendWA()">Enviar pedido por WhatsApp</button></div>
 </aside>
-<a class="wa" href="https://wa.me/570000000000" target="_blank" aria-label="WhatsApp"><svg viewBox="0 0 32 32"><path d="M16 3C9 3 3.3 8.7 3.3 15.7c0 2.5.7 4.8 1.9 6.8L3 29l6.7-2.1c1.9 1.1 4.1 1.6 6.3 1.6 7 0 12.7-5.7 12.7-12.7S23 3 16 3zm0 23.2c-2 0-3.9-.6-5.6-1.6l-.4-.2-4 1.2 1.3-3.9-.3-.4c-1.1-1.7-1.7-3.7-1.7-5.7C5.3 9.9 10.1 5.2 16 5.2s10.7 4.7 10.7 10.6S21.9 26.2 16 26.2zm5.9-7.9c-.3-.2-1.9-.9-2.2-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7.1a8.8 8.8 0 0 1-4.4-3.8c-.3-.6.3-.5.9-1.7.1-.2 0-.4 0-.5l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4s-1.2 1.1-1.2 2.7 1.2 3.1 1.4 3.4 2.3 3.6 5.6 5c2.1.9 2.9 1 4 .8.6-.1 1.9-.8 2.2-1.5s.3-1.4.2-1.5-.3-.2-.6-.4z"/></svg></a>
+<a class="wa" href="https://wa.me/573005435314" target="_blank" aria-label="WhatsApp"><svg viewBox="0 0 32 32"><path d="M16 3C9 3 3.3 8.7 3.3 15.7c0 2.5.7 4.8 1.9 6.8L3 29l6.7-2.1c1.9 1.1 4.1 1.6 6.3 1.6 7 0 12.7-5.7 12.7-12.7S23 3 16 3zm0 23.2c-2 0-3.9-.6-5.6-1.6l-.4-.2-4 1.2 1.3-3.9-.3-.4c-1.1-1.7-1.7-3.7-1.7-5.7C5.3 9.9 10.1 5.2 16 5.2s10.7 4.7 10.7 10.6S21.9 26.2 16 26.2zm5.9-7.9c-.3-.2-1.9-.9-2.2-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7.1a8.8 8.8 0 0 1-4.4-3.8c-.3-.6.3-.5.9-1.7.1-.2 0-.4 0-.5l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4s-1.2 1.1-1.2 2.7 1.2 3.1 1.4 3.4 2.3 3.6 5.6 5c2.1.9 2.9 1 4 .8.6-.1 1.9-.8 2.2-1.5s.3-1.4.2-1.5-.3-.2-.6-.4z"/></svg></a>
 <script>
 const P=[
 {n:'Vestido Brisa',c:'Mujer',p:89000,e:'👗',bg:'#fde2f0',nw:1},
@@ -133,7 +133,7 @@ function upd(){const k=Object.keys(cart);count.textContent=k.reduce((s,i)=>s+car
 function toggle(o){drawer.classList.toggle('open',o);shade.classList.toggle('open',o)}
 function sendWA(){const k=Object.keys(cart);if(!k.length)return alert('Agrega productos primero');
  let m='Hola Lúa Store 👋 quiero pedir:%0A'+k.map(i=>`• ${cart[i]} x ${P[i].n} (${fmt(P[i].p)})`).map(encodeURIComponent).join('%0A')+'%0A'+encodeURIComponent('Total: '+total.textContent);
- window.open('https://wa.me/570000000000?text='+m,'_blank')}
+ window.open('https://wa.me/573005435314?text='+m,'_blank')}
 render();upd();
 </script>
 </body></html>
