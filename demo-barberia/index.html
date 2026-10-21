@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Navaja Negra Barber Studio (Demo)</title>
+<meta name="description" content="Demo de landing page para barbería. Negocio ficticio de ejemplo.">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--g:#c9a227;--bg:#0e0e10;--c:#18181c;--t:#ececec}
+body{font-family:Georgia,"Times New Roman",serif;background:var(--bg);color:var(--t);line-height:1.6}
+.sans{font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1150px;margin:auto;padding:0 22px}
+.demo{background:var(--g);color:#000;text-align:center;font:600 13px system-ui;padding:6px}
+header{position:sticky;top:0;background:rgba(14,14,16,.9);backdrop-filter:blur(8px);z-index:10;border-bottom:1px solid #2a2a2e}
+nav{display:flex;justify-content:space-between;align-items:center;height:70px}
+.logo{font-size:22px;letter-spacing:3px;text-transform:uppercase}.logo b{color:var(--g)}
+.links{display:flex;gap:28px;font-family:system-ui;font-size:15px}
+.links a:hover{color:var(--g)}
+.btn{display:inline-block;font-family:system-ui;font-weight:700;background:var(--g);color:#000;padding:14px 28px;border-radius:4px;letter-spacing:1px;text-transform:uppercase;font-size:14px;transition:.2s}
+.btn:hover{background:#e0b83a}
+.btn.o{background:transparent;color:var(--g);border:1px solid var(--g)}
+.hero{min-height:min(84vh,720px);padding:80px 0;display:flex;align-items:center;background:radial-gradient(ellipse at 75% 40%,rgba(201,162,39,.25),transparent 55%),linear-gradient(180deg,#0e0e10,#16140f);position:relative;overflow:hidden}
+.hero:after{content:"💈";position:absolute;right:8%;top:50%;transform:translateY(-50%);font-size:300px;opacity:.9;filter:drop-shadow(0 0 50px rgba(201,162,39,.4))}
+.kick{font-family:system-ui;color:var(--g);letter-spacing:4px;text-transform:uppercase;font-size:14px}
+h1{font-size:clamp(42px,6vw,76px);line-height:1.05;margin:16px 0 20px;max-width:640px}
+h1 i{color:var(--g)}
+.hero p{font-family:system-ui;color:#aaa;font-size:18px;max-width:500px;margin-bottom:32px}
+.cta{display:flex;gap:14px;flex-wrap:wrap}
+section{padding:90px 0}
+h2{font-size:clamp(32px,4vw,48px);text-align:center}
+.line{width:60px;height:2px;background:var(--g);margin:14px auto 46px}
+.svc{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:2px;background:#2a2a2e;border:1px solid #2a2a2e}
+.s{background:var(--c);padding:34px;transition:.25s}
+.s:hover{background:#201e18}
+.s .ic{font-size:38px}.s h3{font-size:22px;margin:10px 0 4px}
+.s p{font-family:system-ui;color:#999;font-size:15px}
+.s .p{font-family:system-ui;color:var(--g);font-weight:800;font-size:20px;margin-top:12px}
+.team{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px}
+.m{text-align:center}
+.av{aspect-ratio:1;border-radius:6px;background:linear-gradient(160deg,#2a261a,#111);display:grid;place-items:center;font-size:90px;border:1px solid #2a2a2e;margin-bottom:14px}
+.m small{font-family:system-ui;color:var(--g);letter-spacing:2px;text-transform:uppercase;font-size:12px}
+.book{background:var(--c);border:1px solid #2a2a2e;border-radius:8px;padding:40px;display:grid;grid-template-columns:1fr 1fr;gap:40px}
+form{display:grid;gap:14px;font-family:system-ui}
+label{font-size:13px;color:#999}
+input,select{width:100%;padding:13px;background:#0e0e10;border:1px solid #333;color:#fff;border-radius:4px;font-size:15px;margin-top:4px}
+input:focus,select:focus{outline:none;border-color:var(--g)}
+.hours{font-family:system-ui;color:#bbb}.hours div{display:flex;justify-content:space-between;border-bottom:1px dashed #333;padding:10px 0}
+footer{border-top:1px solid #2a2a2e;text-align:center;padding:30px;font:14px system-ui;color:#777}
+.wa{position:fixed;right:22px;bottom:22px;width:62px;height:62px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 10px 25px rgba(0,0,0,.4);z-index:20}
+.wa svg{width:34px;fill:#fff}
+.menu-t{display:none;background:none;border:0;color:#fff;font-size:28px}
+@media(max-width:820px){.hero:after{font-size:150px;right:-20px;top:auto;bottom:-20px;transform:none;opacity:.35}.book{grid-template-columns:1fr;padding:24px}.links{display:none;position:absolute;top:70px;left:0;right:0;background:var(--bg);flex-direction:column;padding:20px}.links.open{display:flex}.menu-t{display:block}}
+</style>
+</head>
+<body>
+<div class="demo">⚠️ Sitio de DEMOSTRACIÓN — "Navaja Negra" es un negocio ficticio de ejemplo</div>
+<header><div class="wrap"><nav>
+<a class="logo" href="#">Navaja <b>Negra</b></a>
+<div class="links" id="links"><a href="#servicios">Servicios</a><a href="#equipo">Barberos</a><a href="#reserva">Reservar</a><a href="https://wa.me/570000000000" target="_blank" style="color:var(--g)">WhatsApp</a></div>
+<button class="menu-t" onclick="document.getElementById('links').classList.toggle('open')">☰</button>
+</nav></div></header>
+
+<section class="hero"><div class="wrap">
+<span class="kick">Barber Studio · Desde 2026</span>
+<h1>Tu estilo, <i>afilado</i> a la perfección</h1>
+<p>Cortes clásicos y modernos, arreglo de barba con toalla caliente y un ambiente donde te sientes en casa. Reserva en menos de un minuto.</p>
+<div class="cta"><a class="btn" href="#reserva">Reservar cita</a><a class="btn o" href="#servicios">Ver precios</a></div>
+</div></section>
+
+<section id="servicios"><div class="wrap">
+<h2>Servicios</h2><div class="line"></div>
+<div class="svc sans">
+<div class="s"><div class="ic">✂️</div><h3>Corte clásico</h3><p>Tijera y máquina, lavado y peinado.</p><div class="p">$25.000</div></div>
+<div class="s"><div class="ic">💈</div><h3>Fade / Degradado</h3><p>Low, mid o high fade con diseño opcional.</p><div class="p">$30.000</div></div>
+<div class="s"><div class="ic">🧔</div><h3>Barba premium</h3><p>Perfilado con navaja y toalla caliente.</p><div class="p">$18.000</div></div>
+<div class="s"><div class="ic">👑</div><h3>Combo Rey</h3><p>Corte + barba + mascarilla facial.</p><div class="p">$45.000</div></div>
+<div class="s"><div class="ic">👦</div><h3>Corte niños</h3><p>Hasta 12 años, con paciencia y buen trato.</p><div class="p">$20.000</div></div>
+<div class="s"><div class="ic">🎨</div><h3>Color / Tinte</h3><p>Canas, mechas o color fantasía.</p><div class="p">Desde $40.000</div></div>
+</div><p class="sans" style="text-align:center;color:#666;margin-top:14px;font-size:13px">Precios de ejemplo</p>
+</div></section>
+
+<section id="equipo" style="background:#121214"><div class="wrap">
+<h2>Nuestros barberos</h2><div class="line"></div>
+<div class="team">
+<div class="m"><div class="av">🧑🏽</div><h3>Barbero 1</h3><small>Especialista en fades</small></div>
+<div class="m"><div class="av">🧔🏻</div><h3>Barbero 2</h3><small>Barbas y navaja</small></div>
+<div class="m"><div class="av">👨🏾</div><h3>Barbero 3</h3><small>Diseños y color</small></div>
+</div></div></section>
+
+<section id="reserva"><div class="wrap">
+<h2>Reserva tu cita</h2><div class="line"></div>
+<div class="book">
+<form id="f">
+<div><label>Nombre</label><input id="n" required placeholder="Tu nombre"></div>
+<div><label>Servicio</label><select id="sv"><option>Corte clásico</option><option>Fade / Degradado</option><option>Barba premium</option><option>Combo Rey</option></select></div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px"><div><label>Fecha</label><input id="d" type="date" required></div><div><label>Hora</label><input id="h" type="time" required></div></div>
+<button class="btn" type="submit" style="border:0;cursor:pointer">Confirmar por WhatsApp</button>
+</form>
+<div class="hours"><h3 style="font-family:Georgia;margin-bottom:10px">Horario</h3>
+<div><span>Lunes – Viernes</span><span>9:00 – 20:00</span></div>
+<div><span>Sábado</span><span>8:00 – 21:00</span></div>
+<div><span>Domingo</span><span>10:00 – 15:00</span></div>
+<p style="margin-top:18px">📍 Carrera Ejemplo #45-67<br>📞 +57 000 000 0000 (ejemplo)</p></div>
+</div></div></section>
+
+<footer>© 2026 Navaja Negra Barber Studio — Demo de landing page. Negocio, personas y precios ficticios.</footer>
+<a class="wa" href="https://wa.me/570000000000?text=Hola,%20quiero%20reservar%20una%20cita" target="_blank" aria-label="WhatsApp"><svg viewBox="0 0 32 32"><path d="M16 3C9 3 3.3 8.7 3.3 15.7c0 2.5.7 4.8 1.9 6.8L3 29l6.7-2.1c1.9 1.1 4.1 1.6 6.3 1.6 7 0 12.7-5.7 12.7-12.7S23 3 16 3zm0 23.2c-2 0-3.9-.6-5.6-1.6l-.4-.2-4 1.2 1.3-3.9-.3-.4c-1.1-1.7-1.7-3.7-1.7-5.7C5.3 9.9 10.1 5.2 16 5.2s10.7 4.7 10.7 10.6S21.9 26.2 16 26.2zm5.9-7.9c-.3-.2-1.9-.9-2.2-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7.1a8.8 8.8 0 0 1-4.4-3.8c-.3-.6.3-.5.9-1.7.1-.2 0-.4 0-.5l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4s-1.2 1.1-1.2 2.7 1.2 3.1 1.4 3.4 2.3 3.6 5.6 5c2.1.9 2.9 1 4 .8.6-.1 1.9-.8 2.2-1.5s.3-1.4.2-1.5-.3-.2-.6-.4z"/></svg></a>
+<script>
+document.getElementById('f').onsubmit=e=>{e.preventDefault();const m=`Hola, soy ${n.value}. Quiero reservar: ${sv.value} el ${d.value} a las ${h.value}.`;window.open('https://wa.me/570000000000?text='+encodeURIComponent(m),'_blank')};
+document.querySelectorAll('.links a').forEach(a=>a.onclick=()=>document.getElementById('links').classList.remove('open'));
+</script>
+</body></html>
